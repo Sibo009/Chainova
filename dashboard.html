@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Dashboard – Chainova</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h2>Your Dashboard</h2>
+  <p id="credits"></p>
+  <p id="plan"></p>
+  <p id="trial"></p>
+
+  <h3>Workflow Builder</h3>
+  <input id="workflowName" placeholder="Workflow Name">
+  <div id="blocks">
+    <button onclick="addBlock('Send Email')">Send Email</button>
+    <button onclick="addBlock('Post Social')">Post Social</button>
+    <button onclick="addBlock('Generate Content')">Generate Content</button>
+  </div>
+  <div id="canvas" style="border:1px solid #fff; min-height:150px; margin-top:10px; padding:10px;"></div>
+  <button onclick="saveWorkflow()">Save Workflow</button>
+
+  <h3>Upgrade Plan</h3>
+  <div id="paypal-button-container"></div>
+
+  <button onclick="logout()">Logout</button>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
+  <script src="https://www.paypal.com/sdk/js?client-id=YOUR_SANDBOX_CLIENT_ID&currency=USD"></script>
+  <script src="app.js"></script>
+</body>
+</html>
